@@ -166,8 +166,14 @@ const GalleryManager = {
 
         try {
             await this.loadData();
-            this.setupResizeListener();
+
+            // Initial column setup
             this.createColumns();
+
+            // Force checking column count again just in case (for mobile)
+            this.reorganizeGallery();
+
+            this.setupResizeListener();
             this.loadPart();
             this.setupLoadMore();
         } catch (error) {
@@ -204,7 +210,7 @@ const GalleryManager = {
 
     getColumnCount() {
         const width = window.innerWidth;
-        if (width <= 480) return 1;
+        if (width <= 480) return 2; // Mobile: 2 columns requested
         if (width <= 768) return 2; // Tablet portrait: 2
         if (width <= 1100) return 3; // Tablet landscape: 3
         return 4; // Desktop: 4
@@ -260,6 +266,10 @@ const GalleryManager = {
 
         items.forEach((item, i) => {
             const el = this.createItemElement(item);
+
+            // Boş obje (spacer) kontrolü
+            if (!el) return;
+
             this.allItems.push(el); // Store for resize
 
             const columnIndex = (currentTotalCount + i) % this.columns.length;
@@ -276,6 +286,9 @@ const GalleryManager = {
     },
 
     createItemElement(item) {
+        // Boş obje kontrolü - Spacer
+        if (!item.src && !item.type) return null;
+
         const div = document.createElement('div');
         div.className = 'masonry-item skeleton-item';
         div.style.opacity = '0';

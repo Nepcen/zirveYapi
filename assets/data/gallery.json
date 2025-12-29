@@ -26,11 +26,6 @@
           "alt": "Uygulama Videosu 2"
         },
         {
-          "type": "image",
-          "src": "assets/images/gallery/img-3.jpg",
-          "alt": "Zemin Uygulaması 3"
-        },
-        {
           "type": "video",
           "cover": "https://placehold.co/800x600/16213e/ffffff?text=Video+3",
           "src": "assets/videos/vid-3.mp4",
@@ -46,6 +41,17 @@
           "cover": "https://placehold.co/600x400/e94560/ffffff?text=Video+4",
           "src": "assets/videos/vid-4.mp4",
           "alt": "Uygulama Videosu 4"
+        },
+        {
+          "type": "image",
+          "src": "assets/images/gallery/img-3.jpg",
+          "alt": "Zemin Uygulaması 3"
+        },
+        {
+          "type": "video",
+          "cover": "https://placehold.co/800x600/0078D5/ffffff?text=Video+18",
+          "src": "assets/videos/vid-18.mp4",
+          "alt": "Uygulama Videosu 18"
         }
       ]
     },
@@ -75,11 +81,6 @@
           "alt": "Uygulama Videosu 6"
         },
         {
-          "type": "image",
-          "src": "assets/images/gallery/img-7.jpg",
-          "alt": "Zemin Uygulaması 7"
-        },
-        {
           "type": "video",
           "cover": "https://placehold.co/600x400/f1c40f/ffffff?text=Video+7",
           "src": "assets/videos/vid-7.mp4",
@@ -90,11 +91,17 @@
           "src": "assets/images/gallery/img-8.jpg",
           "alt": "Zemin Uygulaması 8"
         },
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/700x500/9b59b6/ffffff?text=Video+8",
           "src": "assets/videos/vid-8.mp4",
           "alt": "Uygulama Videosu 8"
+        },
+        {
+          "type": "image",
+          "src": "assets/images/gallery/img-7.jpg",
+          "alt": "Zemin Uygulaması 7"
         }
       ]
     },
@@ -106,6 +113,7 @@
           "src": "assets/images/gallery/img-9.jpg",
           "alt": "Zemin Uygulaması 9"
         },
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/600x800/34495e/ffffff?text=Video+9",
@@ -124,11 +132,6 @@
           "alt": "Uygulama Videosu 10"
         },
         {
-          "type": "image",
-          "src": "assets/images/gallery/img-11.jpg",
-          "alt": "Zemin Uygulaması 11"
-        },
-        {
           "type": "video",
           "cover": "https://placehold.co/500x400/d35400/ffffff?text=Video+11",
           "src": "assets/videos/vid-11.mp4",
@@ -139,11 +142,18 @@
           "src": "assets/images/gallery/img-12.jpg",
           "alt": "Zemin Uygulaması 12"
         },
+        {},
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/800x600/2980b9/ffffff?text=Video+12",
           "src": "assets/videos/vid-12.mp4",
           "alt": "Uygulama Videosu 12"
+        },
+        {
+          "type": "image",
+          "src": "assets/images/gallery/img-11.jpg",
+          "alt": "Zemin Uygulaması 11"
         }
       ]
     },
@@ -155,6 +165,7 @@
           "src": "assets/images/gallery/img-13.jpg",
           "alt": "Zemin Uygulaması 13"
         },
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/600x400/8e44ad/ffffff?text=Video+13",
@@ -166,6 +177,7 @@
           "src": "assets/images/gallery/img-14.jpg",
           "alt": "Zemin Uygulaması 14"
         },
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/600x800/c0392b/ffffff?text=Video+14",
@@ -184,17 +196,13 @@
           "src": "assets/videos/vid-16.mp4",
           "alt": "Uygulama Videosu 16"
         },
+        {},
+        {},
         {
           "type": "video",
           "cover": "https://placehold.co/600x400/072C5E/ffffff?text=Video+17",
           "src": "assets/videos/vid-17.mp4",
           "alt": "Uygulama Videosu 17"
-        },
-        {
-          "type": "video",
-          "cover": "https://placehold.co/800x600/0078D5/ffffff?text=Video+18",
-          "src": "assets/videos/vid-18.mp4",
-          "alt": "Uygulama Videosu 18"
         }
       ]
     }
