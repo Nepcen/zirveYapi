@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zirve Yapı - Endüstriyel zemin betonu ve beton uygulamaları">
+    <title>Zirve Yapı | Zemin Betonu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="assets/images/zy-logo-big.svg" alt="Zirve Yapı Logo" class="splash-logo">
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="assets/images/zy-logo-low.svg" alt="Zirve Yapı Logo"></a>
+            <nav>
+                <a href="#hakkimizda">Hakkımızda</a>
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#projeler">Projeler</a>
+                <a href="#iletisim" class="btn-nav">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sağlam Temeller, Güçlü Yapılar</h1>
+            <p>20+ yıllık deneyimle endüstriyel zemin betonu ve profesyonel beton uygulamaları</p>
+            <a href="#iletisim" class="btn">Teklif Alın</a>
+        </div>
+    </section>
+
+    <!-- Hakkımızda -->
+    <section id="hakkimizda" class="about">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>Zirve Yapı, 2004 yılından bu yana endüstriyel zemin betonu alanında hizmet vermektedir. Fabrika
+                zeminleri, depo alanları ve ticari tesisler için yüksek dayanımlı zemin çözümleri sunuyoruz.</p>
+            <div class="stats">
+                <div class="stat"><strong>20+</strong><span>Yıl Deneyim</span></div>
+                <div class="stat"><strong>500+</strong><span>Proje</span></div>
+                <div class="stat"><strong>150+</strong><span>Müşteri</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetler -->
+    <section id="hizmetler" class="services">
+        <div class="container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Zemin Betonu</h3>
+                    <p>Lazer screed teknolojisi ile yüksek dayanımlı endüstriyel zemin betonu</p>
+                </div>
+                <div class="service-card">
+                    <h3>Endüstriyel Beton</h3>
+                    <p>Ağır yüklere dayanıklı, forklift trafiğine uygun zemin çözümleri</p>
+                </div>
+                <div class="service-card">
+                    <h3>Şap Uygulamaları</h3>
+                    <p>Her türlü zemin kaplama öncesi düzgün tesviye uygulamaları</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projeler -->
+    <section id="projeler" class="projects">
+        <div class="container">
+            <h2>Projelerimiz</h2>
+
+            <div class="masonry-grid" id="gallery">
+                <!-- Skeleton items (JS tarafından kaldırılacak) -->
+                <div class="skeleton-item"></div>
+                <div class="skeleton-item skeleton-tall"></div>
+                <div class="skeleton-item"></div>
+                <div class="skeleton-item skeleton-tall"></div>
+                <div class="skeleton-item"></div>
+                <div class="skeleton-item"></div>
+            </div>
+
+            <div class="load-more-container" id="loadMoreContainer">
+                <button id="loadMoreBtn" class="btn">Daha Fazla Yükle</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-btn lightbox-prev">‹</button>
+        <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <video class="lightbox-video" id="lightboxVideo" controls preload="none">
+                <source id="lightboxVideoSource" src="" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video>
+        </div>
+        <button class="lightbox-btn lightbox-next">›</button>
+    </div>
+
+
+    <!-- İletişim -->
+    <section id="iletisim" class="contact">
+        <div class="container">
+            <h2>İletişim</h2>
+            <div class="contact-grid">
+                <form class="form">
+                    <input type="text" placeholder="Adınız" required>
+                    <input type="email" placeholder="E-posta" required>
+                    <textarea placeholder="Mesajınız" rows="4" required></textarea>
+                    <button type="submit" class="btn">Gönder</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-group">
+                        <p>
+                            <strong>Merkez Ofis Adresi:</strong><br>
+                            <a href="https://maps.app.goo.gl/3XyZJ3W9yQW" target="_blank" class="contact-link">OSB 1.
+                                Cadde No:45, Büyükçekmece/İstanbul</a>
+                        </p>
+                        <p>
+                            <strong>Telefon & WhatsApp:</strong><br>
+                            <a href="tel:+905325551234" class="contact-link">0 (532) 555 12 34</a> <small>(Ahmet
+                                Bey)</small><br>
+                            <a href="tel:+905334445566" class="contact-link">0 (533) 444 55 66</a> <small>(Mehmet
+                                Bey)</small>
+                        </p>
+                        <p>
+                            <strong>E-posta Adreslerimiz:</strong><br>
+                            <a href="mailto:info@zirveyapi.com" class="contact-link">info@zirveyapi.com</a><br>
+                            <a href="mailto:destek@zirveyapi.com" class="contact-link">destek@zirveyapi.com</a>
+                        </p>
+                    </div>
+
+                    <div class="social-media">
+                        <strong>Bizi Takip Edin:</strong>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Zirve Yapı. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
