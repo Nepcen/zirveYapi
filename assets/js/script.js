@@ -26,6 +26,45 @@ document.querySelector('.form')?.addEventListener('submit', (e) => {
     e.target.reset();
 });
 
+// Mobile Menu Toggle
+const mobileBtn = document.querySelector('.mobile-menu-btn');
+const nav = document.querySelector('.navbar nav'); // .nav-menu class added to HTML, simpler selector
+
+if (mobileBtn && nav) {
+    mobileBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nav.classList.toggle('active');
+
+        // Icon toggle
+        const icon = mobileBtn.querySelector('i');
+        if (nav.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !mobileBtn.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            mobileBtn.querySelector('i').classList.remove('fa-times');
+            mobileBtn.querySelector('i').classList.add('fa-bars');
+        }
+    });
+
+    // Close menu when a link is clicked
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            mobileBtn.querySelector('i').classList.remove('fa-times');
+            mobileBtn.querySelector('i').classList.add('fa-bars');
+        });
+    });
+}
+
 // =========================================
 // MASONRY GALLERY - LIGHTBOX FUNCTIONALITY
 // =========================================

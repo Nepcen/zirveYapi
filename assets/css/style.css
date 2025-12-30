@@ -46,6 +46,10 @@ body {
     align-items: center;
 }
 
+.mobile-menu-btn {
+    display: none;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -592,8 +596,64 @@ section h2 {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar .container {
+        position: relative;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 101;
+    }
+
     .navbar nav {
         display: none;
+        /* JS ile active olunca flex olacak */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary);
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar nav.active {
+        display: flex;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .navbar nav a {
+        display: block;
+        /* Tıklama alanı genişlesin */
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+
+    .btn-nav {
+        display: inline-block;
+        /* Mobilde buton görünümü korunsun ama block değil inline-block olsun */
+        width: auto;
     }
 
     .hero h1 {
