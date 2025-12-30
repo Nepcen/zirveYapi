@@ -37,18 +37,13 @@ const lightboxClose = document.querySelector('.lightbox-close');
 const lightboxPrev = document.querySelector('.lightbox-prev');
 const lightboxNext = document.querySelector('.lightbox-next');
 
-let allItems = [];
-let currentItemIndex = 0;
 
-// Collect all gallery items (images and videos)
-function collectAllItems() {
-    allItems = Array.from(document.querySelectorAll('.masonry-item'));
-}
+let currentItemIndex = 0;
 
 // Open lightbox
 function openLightbox(item) {
-    collectAllItems();
-    currentItemIndex = allItems.indexOf(item);
+    // GalleryManager.allItems is already in JSON order (horizontal logical order)
+    currentItemIndex = GalleryManager.allItems.indexOf(item);
     updateLightboxContent();
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -56,7 +51,7 @@ function openLightbox(item) {
 
 // Update lightbox content based on item type
 function updateLightboxContent() {
-    const item = allItems[currentItemIndex];
+    const item = GalleryManager.allItems[currentItemIndex];
     if (!item) return;
 
     const isVideo = item.dataset.type === 'video';
@@ -110,11 +105,22 @@ function navigateLightbox(direction) {
     // Stop current video before navigating
     stopVideo();
 
+    const totalItems = GalleryManager.allItems.length;
+    let nextIndex = currentItemIndex;
+
+    // Loop to skip null/spacer items
+    // Although spacers are not in allItems array (we filter them in createItemElement),
+    // this logic ensures robustness if they were included.
+    // Actually, createItemElement returns null for spacers and renderItems checks 'if (!el) return',
+    // so spacers are NOT in allItems. Logic is simple.
+
     if (direction === 'next') {
-        currentItemIndex = (currentItemIndex + 1) % allItems.length;
+        nextIndex = (currentItemIndex + 1) % totalItems;
     } else {
-        currentItemIndex = (currentItemIndex - 1 + allItems.length) % allItems.length;
+        nextIndex = (currentItemIndex - 1 + totalItems) % totalItems;
     }
+
+    currentItemIndex = nextIndex;
     updateLightboxContent();
 }
 
@@ -351,8 +357,6 @@ const GalleryManager = {
                 item.setAttribute('data-click-listener', 'true');
             }
         });
-        // Update global light box items
-        collectAllItems();
     }
 };
 
