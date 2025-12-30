@@ -22,7 +22,6 @@ window.addEventListener('scroll', () => {
 // Simple form handling
 document.querySelector('.form')?.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Mesajınız gönderildi. Teşekkürler!');
     e.target.reset();
 });
 
